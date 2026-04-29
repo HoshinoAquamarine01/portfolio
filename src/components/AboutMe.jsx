@@ -5,10 +5,16 @@ import toast from "react-hot-toast";
 const AboutMe = () => {
   const handleDownloadResume = () => {
     try {
-      window.open(import.meta.env.VITE_CV_URL, "_blank");
+      const link = document.createElement("a");
+      link.href = import.meta.env.VITE_CV_URL;
+      link.setAttribute("download", "My_CV.pdf");
+      link.setAttribute("target", "_blank");
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
       toast.success("Resume downloaded successfully!");
     } catch (error) {
-      toast.error("Failed to download resume. Please try again.",error);
+      toast.error("Failed to download resume. Please try again.", error);
     }
   };
   return (
