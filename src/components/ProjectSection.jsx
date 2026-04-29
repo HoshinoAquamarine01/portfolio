@@ -1,8 +1,8 @@
 import { ExternalLink, Github } from "lucide-react";
 import { useState } from "react";
-import ffWebImg from "/image/ff-web.png";
-import englishCenterImg from "/image/englishcenter.png";
-import appTrackerImg from "/image/app-tracker.png";
+import ffWebImg from "../assets/ff-web.png";
+import englishCenterImg from "../assets/englishcenter.png";
+import appTrackerImg from "../assets/app-tracker.png";
 const projects = [
   {
     id: 1,

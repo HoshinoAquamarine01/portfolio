@@ -1,6 +1,6 @@
 import { ArrowDown } from "lucide-react";
 import { useState } from "react";
-
+import chanDungImg from "../assets/chandung.png";
 const techStack = [
   "React",
   "Node.js",
@@ -10,7 +10,7 @@ const techStack = [
   "MERN Stack",
 ];
 
-const PROFILE_IMAGE_SRC = "image/chandung.png";
+const PROFILE_IMAGE_SRC = chanDungImg;
 
 const HeroSection = () => {
   const [showProfileImage, setShowProfileImage] = useState(true);
