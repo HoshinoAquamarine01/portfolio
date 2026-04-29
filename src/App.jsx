@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, HashRouter } from "react-router-dom";
 import Home from "@/pages/Home";
 import Notfound from "@/pages/Notfound";
 import { Toaster } from "react-hot-toast";
@@ -22,12 +22,12 @@ function App() {
     <>
       {loading && <PageLoader />}
       <Toaster />
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route index element={<Home />} />
           <Route path="*" element={<Notfound />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
