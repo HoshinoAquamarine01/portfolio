@@ -15,7 +15,7 @@ import { cn } from "@/lib/utils.js";
 
 emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
 
-// Email validation regex
+
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const validateForm = (data) => {
@@ -57,7 +57,7 @@ const ContactSection = () => {
       ...prev,
       [name]: value,
     }));
-    // Clear error for this field when user starts typing
+
     if (errors[name]) {
       setErrors((prev) => ({
         ...prev,
@@ -69,7 +69,6 @@ const ContactSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validate form
     const validationErrors = validateForm(formData);
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
@@ -108,9 +107,8 @@ const ContactSection = () => {
       setFormData({ name: "", email: "", message: "" });
       setErrors({});
     } catch (err) {
-      toast.error("Failed to send message. Please try again.", err, {
-        duration: 4000,
-      });
+     toast.error("Failed to send message. Please try again.");
+     console.error("EmailJS Error:", err); 
     } finally {
       setIsSubmitting(false);
     }
@@ -118,7 +116,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
-        {/* Overlay loading effect */}
+        
         {isSubmitting && (
           <div className="fixed inset-0 z-9999 flex items-center justify-center bg-black/40 backdrop-blur-sm animate-fade-in">
             <div className="flex flex-col items-center">
