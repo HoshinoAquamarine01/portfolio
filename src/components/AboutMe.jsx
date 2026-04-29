@@ -8,7 +8,7 @@ const AboutMe = () => {
       downloadResume();
       toast.success("Resume downloaded successfully!");
     } catch (error) {
-      toast.error("Failed to download resume. Please try again.");
+      toast.error("Failed to download resume. Please try again.",error);
     }
   };
   return (

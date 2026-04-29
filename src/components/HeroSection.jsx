@@ -10,7 +10,7 @@ const techStack = [
   "MERN Stack",
 ];
 
-const PROFILE_IMAGE_SRC = "/image/chandung.png";
+const PROFILE_IMAGE_SRC = "image/chandung.png";
 
 const HeroSection = () => {
   const [showProfileImage, setShowProfileImage] = useState(true);

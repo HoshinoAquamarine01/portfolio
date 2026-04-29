@@ -1,8 +1,8 @@
 import { ExternalLink, Github } from "lucide-react";
 import { useState } from "react";
-import '/image/ff-web.png'
-import '/image/englishcenter.png'
-import '/image/app-tracker.png'
+import ffWebImg from "/image/ff-web.png";
+import englishCenterImg from "/image/englishcenter.png";
+import appTrackerImg from "/image/app-tracker.png";
 const projects = [
   {
     id: 1,
@@ -10,7 +10,7 @@ const projects = [
     timeline: "09/2025 - 11/2025",
     description:
       "A full-stack e-commerce web application for fresh produce, built to deliver a smooth shopping experience from product discovery to checkout. It includes category-based browsing, detailed product views, cart and quantity management, and a scalable backend structure designed for future admin features such as inventory control, order management, and promotional campaigns.",
-    image: "/image/ff-web.png",
+    image: ffWebImg,
     tags: ["React", "Node.js", "MongoDB", "TailwindCSS", "Express.js", "Vite"],
     demoUrl: null,
     githubUrl: "https://github.com/vanhuy2005/fresh-fruit-web",
@@ -21,7 +21,7 @@ const projects = [
     timeline: "11/2025 - 12/2025",
     description:
       "A learning management platform developed for English centers to streamline daily academic operations and communication. The system supports class scheduling workflows, student profile and progress management, and role-based modules for administrators, teachers, and learners, helping teams manage teaching activities more efficiently and consistently.",
-    image: "/image/englishcenter.png",
+    image: englishCenterImg,
     tags: ["React", "Node.js", "MongoDB", "TailwindCSS", "Express.js", "Vite"],
     demoUrl: null,
     githubUrl: "https://github.com/vanhuy2005/english-center",
@@ -32,7 +32,7 @@ const projects = [
     timeline: "02/2026 - Now",
     description:
       "An ongoing job application tracking system that helps users organize opportunities and stay on top of every application stage. It provides structured status pipelines, deadline reminders, and task-focused workflows to manage follow-ups, interviews, and priorities in one place, making the job search process more transparent, consistent, and easier to maintain over time.",
-    image: "/image/app-tracker.png",
+    image: appTrackerImg,
     tags: [
       "React",
       "Node.js",
