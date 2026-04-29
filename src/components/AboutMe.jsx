@@ -1,11 +1,11 @@
 import { Code, User, Briefcase, Download } from "lucide-react";
-import { downloadResume } from "@/lib/resume";
+
 import toast from "react-hot-toast";
 
 const AboutMe = () => {
   const handleDownloadResume = () => {
     try {
-      downloadResume();
+      window.open(import.meta.env.VITE_CV_URL, "_blank");
       toast.success("Resume downloaded successfully!");
     } catch (error) {
       toast.error("Failed to download resume. Please try again.",error);
