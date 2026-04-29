@@ -227,4 +227,4 @@ This portfolio is designed to communicate three things quickly:
 - I care about UI quality and user experience
 - I can ship and maintain production-ready code
 
-If you are a recruiter or hiring manager, feel free to connect for opportunities.
+
